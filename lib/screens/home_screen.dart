@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
     // final colors = context.colorScheme;
     final deviceSize = context.deviceSize;
     // final textTheme = context.textTheme;
-
+//TODO ограничить рамки по кнопкам и менюшкам
     return Scaffold(
       backgroundColor: Color.fromARGB(355, 0, 149, 255),
       body: Stack(
@@ -23,10 +23,22 @@ class HomeScreen extends StatelessWidget {
               Center(
                 child: Container(
                   height: 100, //deviceSize.height * 0.1
-                  width: deviceSize.width * 0.95, // deviceSize.width
+                  width: deviceSize.width * 0.95, 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     color: Color.fromARGB(355, 0, 78, 153), // colors.primary
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center, // TODO
+                    children: [
+                      Column(
+                        children: [
+                          // 
+                          //
+                        ],
+                      ),
+                    ],
+                    
                   ),
                   //TODO theme для всего приложения
                 ),
@@ -43,6 +55,7 @@ class HomeScreen extends StatelessWidget {
                   //TODO theme для всего приложения
                 ),
               ),
+              Gap(20),
               Row(
                 children: [
                   Center(
@@ -50,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Gap(20),
                   Center(
-                    child: Text('89%'),
+                    child: Text('89%'), //TODO add style, adding window
                   ),
                 ],
               ),
