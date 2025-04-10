@@ -16,7 +16,7 @@ class DescribingSelfawareness extends StatelessWidget {
       // 'Опишите своё самочувствие',
       style: context.textTheme.labelSmall?.copyWith(
         color: Color.fromARGB(255, 255, 255, 255), // context.colorScheme.surface
-        fontWeight: fontWeight ?? FontWeight.normal,
+        fontWeight: fontWeight ?? FontWeight.w300,
         fontSize: 11, // fontSize
       ),
     ); //TODO add style

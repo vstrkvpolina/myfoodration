@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
     final deviceSize = context.deviceSize;
     // final textTheme = context.textTheme;
 //TODO ограничить рамки по кнопкам и менюшкам
+// first widget
     return Scaffold(
       backgroundColor: Color.fromARGB(355, 0, 149, 255),
       body: Stack(
@@ -56,15 +57,23 @@ class HomeScreen extends StatelessWidget {
                 ),
               ), // посчитать количество виджетов и записать как есть
               const Gap(10),
+// second widget              
               Center(
                 child: Container(
-                  height: 600, //deviceSize.height * 0.1
+                  height: 400, //deviceSize.height * 0.1
                   width: deviceSize.width * 0.95, // deviceSize.width
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     color: Color.fromARGB(355, 0, 78, 153), // colors.primary
                   ),
-                  //TODO theme для всего приложения
+                  child: Column(
+                    children: [
+                      Container(
+                        // graphic
+                      ),
+                    ],
+                  ),
+                  //TODO theme для всего приложения graphics and so on
                 ),
               ),
               Gap(20),
@@ -83,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                     ), //TODO add style
                   ),
                   Center(
-                    child: FatPercent(),
+                    child: FatPercent(text: '-89%'),
                   ),
                 ],
               ),

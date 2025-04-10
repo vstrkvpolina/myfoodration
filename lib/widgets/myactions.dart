@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-// todo уродство нужно переделать, сделать лого вручную и передлать в png в figma
-
 class Myactions extends StatelessWidget {
   const Myactions({super.key});
 

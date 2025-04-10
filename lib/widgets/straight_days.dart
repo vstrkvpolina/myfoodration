@@ -17,7 +17,7 @@ class StraightDays extends StatelessWidget {
         // '18 дней без перерыва', // слова его подружки, add icon lightning ,add function like calculator;
         color:
             Color.fromARGB(255, 255, 255, 255), // context.colorScheme.surface
-        fontWeight: fontWeight ?? FontWeight.normal,
+        fontWeight: fontWeight ?? FontWeight.bold,
         fontSize: 18, // fontSize
       ),
     ); //TODO add style
