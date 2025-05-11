@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:myfoodration/util/utils.dart';
+import 'package:myfoodration/utils/utils.dart';
 import 'package:myfoodration/widgets/describing_self-awareness.dart';
 import 'package:myfoodration/widgets/fat_percent.dart';
 import 'package:myfoodration/widgets/myactions.dart';
 import 'package:myfoodration/widgets/straight_days.dart';
+import 'package:myfoodration/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, this.fontWeight});
@@ -83,24 +84,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Container(
-                          width: deviceSize.width * 0.3,
-                          height: deviceSize.height *
-                              0.1, // проверить по длине и ширине в соотношении
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                            color: Color.fromARGB(355, 0, 78, 153),
-                          ),
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            itemCount: 4,
-                            padding: EdgeInsets.zero,
-                            itemBuilder: (ctx, index) {
-                              return 
-                              const Text('Home');
-                            },
-                          ),
-                        ),
+                        const DisplayListOfResults(results: []),
                         // ElevatedButton(onPressed: () {}, child: Text('Опишите своё самочувствие')),
                       ],
                     ),

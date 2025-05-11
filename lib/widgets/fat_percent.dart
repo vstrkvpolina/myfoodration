@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myfoodration/util/utils.dart';
+import 'package:myfoodration/utils/utils.dart';
 
 class FatPercent extends StatelessWidget {
   const FatPercent({super.key, this.fontWeight, required this.text});

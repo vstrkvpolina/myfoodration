@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:myfoodration/util/utils.dart';
+import 'package:myfoodration/utils/utils.dart';
 
 class AddingScreen extends StatelessWidget {
   const AddingScreen({super.key});

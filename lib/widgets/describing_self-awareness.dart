@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myfoodration/util/extensions.dart';
+import 'package:myfoodration/utils/extensions.dart';
 
 class DescribingSelfawareness extends StatelessWidget {
   const DescribingSelfawareness(

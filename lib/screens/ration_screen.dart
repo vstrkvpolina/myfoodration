@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:myfoodration/util/utils.dart';
+import 'package:myfoodration/utils/utils.dart';
+import 'package:myfoodration/widgets/add_food_button.dart';
+import 'package:myfoodration/widgets/display_list_of_food.dart';
 import 'package:myfoodration/widgets/myfoodration.dart';
 
 class RationScreen extends StatelessWidget {
@@ -33,8 +35,15 @@ class RationScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                     color: Color.fromARGB(355, 0, 78, 153), // colors.primary
                   ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      const AddFoodButton(), // сделать кнопку
+                    ],
+                  ),
                   //TODO theme для всего приложения
                 ),
+                
               ), // посчитать количество виджетов и записать как есть
               const Gap(10),
 // надпись сегодня
@@ -48,53 +57,19 @@ class RationScreen extends StatelessWidget {
 
               const Gap(10),
               Positioned(
+                top: 130,
+                left: 0,
+                right: 0,
                   child: SingleChildScrollView(
                 physics: const AlwaysScrollableScrollPhysics(),
                 padding: EdgeInsets.all(10),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(
-                      width: deviceSize.width, // *0,95
-                      height: 400,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Color.fromARGB(355, 0, 78, 153),
-                      ),
-                      child: ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: 3,
-                          padding: EdgeInsets.zero,
-                          itemBuilder: (ctx, index) {
-                            return Text(
-                                'data'); // сделат текст в отдельный воздух, иначе вылазит за виджет
-                          }),
-                    )
+                    const DisplayListOfFood(food: []),
                   ],
                 ),
               )),
-              // Center(
-              //   child: Container(
-              //     height: 600, //deviceSize.height * 0.1
-              //     width: deviceSize.width * 0.95, // deviceSize.width
-              //     decoration: BoxDecoration(
-              //       borderRadius: BorderRadius.circular(30),
-              //       color: Color.fromARGB(355, 0, 78, 153), // colors.primary
-              //     ),
-              //     //TODO theme для всего приложения
-              //   ),
-              // ),
-              // Row(
-              //   children: [
-              //     Center(
-              //       child:
-              //           Text('Оцените Ваше отражение сегодня'), //TODO add style
-              //     ),
-              //     Gap(20),
-              //     Center(
-              //       child: Text('89%'),
-              //     ),
-              //   ],
-              // ),
             ],
           ),
         ],
