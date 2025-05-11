@@ -25,14 +25,14 @@ class HomeScreen extends StatelessWidget {
           Column(
             children: [
               Center(
-                child:
-                Padding(
+                child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 20, 270, 20),
                   child: Myactions(),
                 ),
               ),
               Center(
                 child: Container(
+                  padding: EdgeInsets.all(20),
                   height: 100, //deviceSize.height * 0.1
                   width: deviceSize.width * 0.95,
                   decoration: BoxDecoration(
@@ -57,27 +57,57 @@ class HomeScreen extends StatelessWidget {
                 ),
               ), // посчитать количество виджетов и записать как есть
               const Gap(10),
-// second widget              
-              Center(
-                child: Container(
-                  height: 400, //deviceSize.height * 0.1
-                  width: deviceSize.width * 0.95, // deviceSize.width
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Color.fromARGB(355, 0, 78, 153), // colors.primary
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                        // graphic
-                      ),
-                    ],
-                  ),
-                  //TODO theme для всего приложения graphics and so on
-                ),
-              ),
+// second widget
+              //  Column(
+              //   children: [
+              //     Container(
+              //       // graphic
+              //     ),
+              //   ],
+              // ),
+              // Expanded(
+              //   child: Container(
+              //     width: deviceSize.width,
+              //     color: Color.fromARGB(355, 0, 78, 153),
+              //   ),
+              // ),
+              //TODO theme для всего приложения graphics and so on
+              Positioned(
+                  // positioned и stack убрать потом
+                  top: 130,
+                  left: 0,
+                  right: 0,
+                  child: SingleChildScrollView(
+                    physics: const AlwaysScrollableScrollPhysics(),
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Container(
+                          width: deviceSize.width * 0.3,
+                          height: deviceSize.height *
+                              0.1, // проверить по длине и ширине в соотношении
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Color.fromARGB(355, 0, 78, 153),
+                          ),
+                          child: ListView.builder(
+                            shrinkWrap: true,
+                            itemCount: 4,
+                            padding: EdgeInsets.zero,
+                            itemBuilder: (ctx, index) {
+                              return 
+                              const Text('Home');
+                            },
+                          ),
+                        ),
+                        // ElevatedButton(onPressed: () {}, child: Text('Опишите своё самочувствие')),
+                      ],
+                    ),
+                  )),
               Gap(20),
               Row(
+                // % widget
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Center(

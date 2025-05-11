@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:myfoodration/app/myfoodration.dart';
 import 'package:myfoodration/util/utils.dart';
 import 'package:myfoodration/widgets/myfoodration.dart';
-
 
 class RationScreen extends StatelessWidget {
   const RationScreen({super.key});
@@ -39,17 +37,25 @@ class RationScreen extends StatelessWidget {
                 ),
               ), // посчитать количество виджетов и записать как есть
               const Gap(10),
-              Text('Today'),
+// надпись сегодня
+              Container(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Сегодня'),
+                ],
+              )),
+
               const Gap(10),
               Positioned(
                   child: SingleChildScrollView(
-                    physics: const AlwaysScrollableScrollPhysics(),
-                    padding: EdgeInsets.all(10),
+                physics: const AlwaysScrollableScrollPhysics(),
+                padding: EdgeInsets.all(10),
                 child: Column(
                   children: [
                     Container(
                       width: deviceSize.width, // *0,95
-                      height: 200,
+                      height: 400,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         color: Color.fromARGB(355, 0, 78, 153),
@@ -59,7 +65,8 @@ class RationScreen extends StatelessWidget {
                           itemCount: 3,
                           padding: EdgeInsets.zero,
                           itemBuilder: (ctx, index) {
-                            return Text('data'); // сделат текст в отдельный воздух, иначе вылазит за виджет
+                            return Text(
+                                'data'); // сделат текст в отдельный воздух, иначе вылазит за виджет
                           }),
                     )
                   ],
@@ -76,18 +83,18 @@ class RationScreen extends StatelessWidget {
               //     //TODO theme для всего приложения
               //   ),
               // ),
-              Row(
-                children: [
-                  Center(
-                    child:
-                        Text('Оцените Ваше отражение сегодня'), //TODO add style
-                  ),
-                  Gap(20),
-                  Center(
-                    child: Text('89%'),
-                  ),
-                ],
-              ),
+              // Row(
+              //   children: [
+              //     Center(
+              //       child:
+              //           Text('Оцените Ваше отражение сегодня'), //TODO add style
+              //     ),
+              //     Gap(20),
+              //     Center(
+              //       child: Text('89%'),
+              //     ),
+              //   ],
+              // ),
             ],
           ),
         ],
