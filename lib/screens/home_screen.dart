@@ -7,6 +7,8 @@ import 'package:myfoodration/widgets/myactions.dart';
 import 'package:myfoodration/widgets/straight_days.dart';
 import 'package:myfoodration/widgets/widgets.dart';
 
+// не переворачивается
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, this.fontWeight});
 
@@ -59,34 +61,22 @@ class HomeScreen extends StatelessWidget {
               ), // посчитать количество виджетов и записать как есть
               const Gap(10),
 // second widget
-              //  Column(
-              //   children: [
-              //     Container(
-              //       // graphic
-              //     ),
-              //   ],
-              // ),
-              // Expanded(
-              //   child: Container(
-              //     width: deviceSize.width,
-              //     color: Color.fromARGB(355, 0, 78, 153),
-              //   ),
-              // ),
               //TODO theme для всего приложения graphics and so on
               Positioned(
                   // positioned и stack убрать потом
                   top: 130,
                   left: 0,
                   right: 0,
-                  child: SingleChildScrollView(
-                    physics: const AlwaysScrollableScrollPhysics(),
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        const DisplayListOfResults(results: []),
-                        // ElevatedButton(onPressed: () {}, child: Text('Опишите своё самочувствие')),
-                      ],
+                  child: SafeArea(
+                    child: SingleChildScrollView(
+                      physics: const AlwaysScrollableScrollPhysics(),
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          const DisplayListOfResults(results: []),
+                        ],
+                      ),
                     ),
                   )),
               Gap(20),

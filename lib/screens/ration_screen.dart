@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:myfoodration/data/data.dart';
 import 'package:myfoodration/utils/utils.dart';
 import 'package:myfoodration/widgets/add_food_button.dart';
 import 'package:myfoodration/widgets/display_list_of_food.dart';
@@ -43,7 +44,6 @@ class RationScreen extends StatelessWidget {
                   ),
                   //TODO theme для всего приложения
                 ),
-                
               ), // посчитать количество виджетов и записать как есть
               const Gap(10),
 // надпись сегодня
@@ -57,19 +57,22 @@ class RationScreen extends StatelessWidget {
 
               const Gap(10),
               Positioned(
-                top: 130,
-                left: 0,
-                right: 0,
+                  top: 130,
+                  left: 0,
+                  right: 0,
                   child: SingleChildScrollView(
-                physics: const AlwaysScrollableScrollPhysics(),
-                padding: EdgeInsets.all(10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const DisplayListOfFood(food: []),
-                  ],
-                ),
-              )),
+                    physics: const AlwaysScrollableScrollPhysics(),
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        DisplayListOfFood(food: [
+                          Food(name: 'name1', date: DateTime(2025, 05, 09)),
+                          Food(name: 'name2', date: DateTime(2025, 05, 09)),
+                        ]),
+                      ],
+                    ),
+                  )),
             ],
           ),
         ],

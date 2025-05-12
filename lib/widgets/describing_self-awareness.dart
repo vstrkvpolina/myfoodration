@@ -27,3 +27,4 @@ class DescribingSelfawareness extends StatelessWidget {
     // add window? + this keeps till the end of the day;
   }
 }
+// ElevatedButton(onPressed: () {}, child: Text('Опишите своё самочувствие')),
