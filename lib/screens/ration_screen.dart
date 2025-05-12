@@ -16,64 +16,57 @@ class RationScreen extends StatelessWidget {
     // final textTheme = context.textTheme;
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(355, 0, 149, 255),
+      backgroundColor: const Color.fromARGB(255, 0, 149, 255),
       body: Stack(
         children: [
           Column(
             children: [
-              //
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 20, 270, 20),
-                  child: MyfoodRation(),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 20, 270, 20),
+                child: MyfoodRation(),
+              ),
+              Container(
+                height: 60,
+                width: deviceSize.width * 0.95,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: const Color.fromARGB(355, 0, 78, 153),
+                ),
+                child: const AddFoodButton(),
+              ),
+              const Gap(10),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Сегодня'),
                 ),
               ),
-              Center(
-                child: Container(
-                  height: 60, //deviceSize.height * 0.1
-                  width: deviceSize.width * 0.95, // deviceSize.width
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Color.fromARGB(355, 0, 78, 153), // colors.primary
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const AddFoodButton(), // сделать кнопку
-                    ],
-                  ),
-                  //TODO theme для всего приложения
-                ),
-              ), // посчитать количество виджетов и записать как есть
-              const Gap(10),
-// надпись сегодня
-              Container(
-                  child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Сегодня'),
-                ],
-              )),
-
-              const Gap(10),
-              Positioned(
-                  top: 130,
-                  left: 0,
-                  right: 0,
-                  child: SingleChildScrollView(
-                    physics: const AlwaysScrollableScrollPhysics(),
-                    padding: EdgeInsets.all(10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        DisplayListOfFood(food: [
-                          Food(name: 'name1', date: DateTime(2025, 05, 09)),
-                          Food(name: 'name2', date: DateTime(2025, 05, 09)),
-                        ]),
-                      ],
-                    ),
-                  )),
             ],
+          ),
+
+          // перенесли Positioned в Stack
+          Positioned(
+            top: 230, // подстрой по высоте, чтобы не наезжало
+            left: 0,
+            right: 0,
+            bottom: 0, // чтобы контент мог прокручиваться
+            child: SingleChildScrollView(
+              physics: const AlwaysScrollableScrollPhysics(),
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: DisplayListOfFood(food: [
+                      Food(name: 'Сгущёнка', date: DateTime(2025, 05, 09)),
+                      Food(name: 'Кефир', date: DateTime(2025, 05, 09)),
+                    ]),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),

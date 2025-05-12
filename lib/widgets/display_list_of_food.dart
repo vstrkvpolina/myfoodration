@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myfoodration/data/data.dart';
 import 'package:myfoodration/utils/utils.dart';
-import 'package:myfoodration/widgets/common_container.dart';
-import 'package:intl/intl.dart';
+import 'package:myfoodration/widgets/widgets.dart';
 
 class DisplayListOfFood extends StatelessWidget {
   const DisplayListOfFood({super.key, required this.food});
@@ -25,40 +24,20 @@ class DisplayListOfFood extends StatelessWidget {
           : ListView.separated(
               shrinkWrap: true,
               itemCount: food.length,
-              padding: const EdgeInsets.only(
-                left: 0,
-                top: 0,
-                bottom: 0,
-              ),
+              padding: EdgeInsets.zero,
               itemBuilder: (ctx, index) {
                 final foodie = food[index];
-                return Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(9.0),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color.fromARGB(355, 0, 78, 153),
-                      ),
-                      // child: Center(
-                      //   child: Icon(
-                      //     Icons.person,
-                      //   ),
-                      // ),
-                    ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(foodie.name),
-                          Text(DateFormat('dd.MM.yyyy').format(foodie
-                              .date)), // это я так парсю в строку, перенести в правый верхий угол
-                        ],
-                      ),
-                    ),
-                    // Checkbox(value: food.isEmpty, onChanged: (value) {})
-                  ],
-                );
+                return InkWell(
+                    onLongPress: () {
+                      //TODO-Delete FOOD 
+                    },
+                    onTap: () async {
+                      //TODO show food consequences
+                      await showBottomSheet(context: context, builder: (ctx){
+                        return FoodConsequences(food: foodie);
+                      });
+                    },
+                    child: FoodTile(food: foodie));
               },
               separatorBuilder: (BuildContext context, int index) {
                 return const Divider(
