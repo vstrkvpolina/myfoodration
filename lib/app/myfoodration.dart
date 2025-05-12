@@ -10,7 +10,7 @@ class MyfoodRation extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: const RationScreen(), 
+      home: const AddingScreen(), 
     );
   }
 }

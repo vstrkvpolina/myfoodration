@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:myfoodration/utils/utils.dart';
+import 'package:myfoodration/widgets/myfoodration.dart';
+import 'package:myfoodration/widgets/today.dart';
 
 class AddingScreen extends StatelessWidget {
   const AddingScreen({super.key});
@@ -17,8 +19,9 @@ class AddingScreen extends StatelessWidget {
         children: [
           Column(
             children: [
-              Center(
-                child: Text('My\nfood\nration'), //TODO add style
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 20, 270, 20),
+                child: MyfoodRation(),
               ),
               Center(
                 child: Container(
@@ -31,9 +34,12 @@ class AddingScreen extends StatelessWidget {
                   //TODO theme для всего приложения
                 ),
               ), // посчитать количество виджетов и записать как есть
-              const Gap(10),
-              Text('Сегодня'),
-              const Gap(10),
+              const Gap(0.5),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 270, 0),
+                child: Today(),
+              ),
+              const Gap(0.5),
               Center(
                 child: Container(
                   height: 600, //deviceSize.height * 0.1
@@ -44,17 +50,6 @@ class AddingScreen extends StatelessWidget {
                   ),
                   //TODO theme для всего приложения
                 ),
-              ),
-              Row(
-                children: [
-                  Center(
-                    child: Text('Оцените Ваше отражение сегодня'), //TODO add style
-                  ),
-                  Gap(20),
-                  Center(
-                    child: Text('89%'),
-                  ),
-                ],
               ),
             ],
           ),
