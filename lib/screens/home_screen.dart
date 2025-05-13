@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                         fontWeight: fontWeight ?? FontWeight.normal,
                         fontSize: 15, // fontSize
                       ),
-                    ), //TODO add style
+                    ), //TODO add style and button
                   ),
                   Center(
                     child: FatPercent(text: '-89%'),

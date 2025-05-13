@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:myfoodration/utils/utils.dart';
@@ -31,6 +32,11 @@ class AddingScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                     color: Color.fromARGB(355, 0, 78, 153), // colors.primary
                   ),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // showCupertinoDialog(context: context, builder: ) //TODO логика для поиска из удалённой бд
+                    },
+                    child: Text('+добавить еду')), // add style
                   //TODO theme для всего приложения
                 ),
               ), // посчитать количество виджетов и записать как есть
