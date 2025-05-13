@@ -1,11 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:myfoodration/utils/utils.dart';
-import 'package:myfoodration/widgets/myfoodration.dart';
+import 'package:myfoodration/widgets/myfoodration_widget.dart';
 import 'package:myfoodration/widgets/today.dart';
 
 class AddingScreen extends StatelessWidget {
+  static AddingScreen builder(BuildContext contex, GoRouterState state) =>
+      const AddingScreen();
   const AddingScreen({super.key});
 
   @override
@@ -22,7 +25,7 @@ class AddingScreen extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 20, 270, 20),
-                child: MyfoodRation(),
+                child: MyfoodRationPhoto(),
               ),
               Center(
                 child: Container(
@@ -33,10 +36,10 @@ class AddingScreen extends StatelessWidget {
                     color: Color.fromARGB(355, 0, 78, 153), // colors.primary
                   ),
                   child: ElevatedButton(
-                    onPressed: () {
-                      // showCupertinoDialog(context: context, builder: ) //TODO логика для поиска из удалённой бд
-                    },
-                    child: Text('+добавить еду')), // add style
+                      onPressed: () {
+                        // showCupertinoDialog(context: context, builder: ) //TODO логика для поиска из удалённой бд
+                      },
+                      child: Text('+добавить еду')), // add style
                   //TODO theme для всего приложения
                 ),
               ), // посчитать количество виджетов и записать как есть

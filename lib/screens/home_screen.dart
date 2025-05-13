@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
+import 'package:myfoodration/config/routes/routes.dart';
 import 'package:myfoodration/utils/utils.dart';
-import 'package:myfoodration/widgets/describing_self-awareness.dart';
+// import 'package:myfoodration/widgets/describing_self-awareness.dart';
 import 'package:myfoodration/widgets/fat_percent.dart';
 import 'package:myfoodration/widgets/myactions.dart';
-import 'package:myfoodration/widgets/straight_days.dart';
+// import 'package:myfoodration/widgets/straight_days.dart';
 import 'package:myfoodration/widgets/widgets.dart';
+import 'package:go_router/go_router.dart';
 
 // не переворачивается
 
 class HomeScreen extends StatelessWidget {
+  static HomeScreen builder(BuildContext contex, GoRouterState state) =>
+      const HomeScreen();
+
   const HomeScreen({super.key, this.fontWeight});
 
   final FontWeight? fontWeight;
@@ -100,7 +106,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              Container(
+                child: ElevatedButton.icon(
+                  onPressed: () => context.push(RouteLocation.addingScreen), 
+                  label: Icon(Icons.person_off_outlined)), // либо из ui kit либо искать и скачивать иконки
+              ),
             ],
+            
           ),
         ],
       ),

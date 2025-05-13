@@ -4,7 +4,7 @@ import 'package:myfoodration/data/data.dart';
 import 'package:myfoodration/utils/utils.dart';
 import 'package:myfoodration/widgets/add_food_button.dart';
 import 'package:myfoodration/widgets/display_list_of_food.dart';
-import 'package:myfoodration/widgets/myfoodration.dart';
+import 'package:myfoodration/widgets/myfoodration_widget.dart';
 
 class RationScreen extends StatelessWidget {
   const RationScreen({super.key});
@@ -23,7 +23,7 @@ class RationScreen extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 20, 270, 20),
-                child: MyfoodRation(),
+                child: MyfoodRationPhoto(),
               ),
               Container(
                 height: 60,
