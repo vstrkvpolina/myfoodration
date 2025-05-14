@@ -5,7 +5,5 @@ export 'display_list_of_results.dart';
 export 'display_list_of_food.dart';
 export 'food_tile.dart';
 export 'food_consequences.dart';
-export 'switchers/adding_screen_switcher.dart';
-export 'switchers/home_screen_switcher.dart';
-export 'switchers/ration_screen_switcher.dart';
+export 'switchers/screen_switcher.dart';
 export 'time_on_ration_screen.dart';

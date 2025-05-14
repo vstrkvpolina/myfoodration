@@ -5,6 +5,9 @@ import 'package:myfoodration/utils/utils.dart';
 import 'package:myfoodration/widgets/add_food_button.dart';
 import 'package:myfoodration/widgets/display_list_of_food.dart';
 import 'package:myfoodration/widgets/pics/myfoodration_widget.dart';
+import 'package:myfoodration/widgets/time_on_ration_screen.dart';
+
+// добавить время переделать с app bar 
 
 class RationScreen extends StatelessWidget {
   const RationScreen({super.key});
@@ -45,7 +48,7 @@ class RationScreen extends StatelessWidget {
             ],
           ),
 
-          // перенесли Positioned в Stack
+          // перенесли Positioned в Stack сделать в SingleChildScrollView
           Positioned(
             top: 230, // подстрой по высоте, чтобы не наезжало
             left: 0,
@@ -58,7 +61,7 @@ class RationScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Row(
-                    
+
                   ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
