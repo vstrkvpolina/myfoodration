@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:myfoodration/data/data.dart';
-import 'package:myfoodration/utils/extensions.dart';
 import 'package:myfoodration/widgets/circle_container.dart';
 
 class FoodTile extends StatelessWidget {

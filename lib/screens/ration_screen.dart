@@ -4,7 +4,7 @@ import 'package:myfoodration/data/data.dart';
 import 'package:myfoodration/utils/utils.dart';
 import 'package:myfoodration/widgets/add_food_button.dart';
 import 'package:myfoodration/widgets/display_list_of_food.dart';
-import 'package:myfoodration/widgets/myfoodration_widget.dart';
+import 'package:myfoodration/widgets/pics/myfoodration_widget.dart';
 
 class RationScreen extends StatelessWidget {
   const RationScreen({super.key});
@@ -50,13 +50,16 @@ class RationScreen extends StatelessWidget {
             top: 230, // подстрой по высоте, чтобы не наезжало
             left: 0,
             right: 0,
-            bottom: 0, // чтобы контент мог прокручиваться
+            bottom: 0, 
             child: SingleChildScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
               padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  Row(
+                    
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: DisplayListOfFood(food: [

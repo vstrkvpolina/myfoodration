@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:myfoodration/utils/utils.dart';
-import 'package:myfoodration/widgets/myfoodration_widget.dart';
-import 'package:myfoodration/widgets/today.dart';
+import 'package:myfoodration/widgets/pics/myfoodration_widget.dart';
+import 'package:myfoodration/widgets/pics/today.dart';
 
 class AddingScreen extends StatelessWidget {
   static AddingScreen builder(BuildContext contex, GoRouterState state) =>

@@ -5,7 +5,7 @@ import 'package:myfoodration/config/routes/routes.dart';
 import 'package:myfoodration/utils/utils.dart';
 // import 'package:myfoodration/widgets/describing_self-awareness.dart';
 import 'package:myfoodration/widgets/fat_percent.dart';
-import 'package:myfoodration/widgets/myactions.dart';
+import 'package:myfoodration/widgets/pics/myactions.dart';
 // import 'package:myfoodration/widgets/straight_days.dart';
 import 'package:myfoodration/widgets/widgets.dart';
 import 'package:go_router/go_router.dart';
