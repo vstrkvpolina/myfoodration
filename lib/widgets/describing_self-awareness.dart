@@ -13,16 +13,27 @@ class DescribingSelfawareness extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {},
-      child: Text(
-        text,
-        // 'Опишите своё самочувствие',
-        style: context.textTheme.labelSmall?.copyWith(
-          color:
-              Color.fromARGB(255, 255, 255, 255), // context.colorScheme.surface
-          fontWeight: fontWeight ?? FontWeight.w300,
-          fontSize: 11, // fontSize
+      child: TextField(
+        readOnly: true,
+        onTap: () {
+          // Открыть окно
+        },
+        decoration: InputDecoration(
+          hintText: 'Describe your self-awareness',
+          border: OutlineInputBorder(),
         ),
       ),
+
+      // Text(
+      //   text,
+      //   // 'Опишите своё самочувствие',
+      //   style: context.textTheme.labelSmall?.copyWith(
+      //     color:
+      //         Color.fromARGB(255, 255, 255, 255), // context.colorScheme.surface
+      //     fontWeight: fontWeight ?? FontWeight.w300,
+      //     fontSize: 11, // fontSize
+      //   ),
+      // ),
     ); //TODO add style
     // add window? + this keeps till the end of the day;
   }

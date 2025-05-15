@@ -7,3 +7,4 @@ export 'food_tile.dart';
 export 'food_consequences.dart';
 export 'switchers/screen_switcher.dart';
 export 'time_on_ration_screen.dart';
+export 'food_selection.dart';
