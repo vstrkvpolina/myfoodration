@@ -1,6 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:convert';
-
 import 'package:equatable/equatable.dart';
 import 'package:myfoodration/utils/utils.dart';
 
@@ -25,7 +22,7 @@ class Food extends Equatable {
     };
   }
 
-  factory Food.fromMap(Map<String, dynamic> map) {
+  factory Food.fromJson(Map<String, dynamic> map) {
     return Food(
       id: map[FoodKeys.id],
       name: map[FoodKeys.name],
