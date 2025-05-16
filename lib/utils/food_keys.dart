@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 class FoodKeys {
   const FoodKeys._();
 
-
-  static const String id
-  static const String name = '';
-  static const String date
+  static const String id = 'id';
+  static const String name = 'name';
+  static const String date = 'date'; // хз
 }
