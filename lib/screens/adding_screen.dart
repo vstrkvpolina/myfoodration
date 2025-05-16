@@ -85,6 +85,16 @@ class AddingScreen extends StatelessWidget {
 //   final time = ref.watch(timeProvider);
 //   if(name.isEmpty) { // 
 //     print('в вашем рационе нет добавленной еды');
+
+
+// await ref.read(foodProvider.notifier).createFood(food).then((value) {
+//AppAlerts.displaySnackBar(context, 'Еда добавлена'),
+// context.go(RouteLocation.home); // хуй знает куда на самом деле
+
+// });
+// } else {
+// AppAlerts.displaySnackBar(context, 'Еда не добавлена'),
+//}
 //   }
 // }
 
