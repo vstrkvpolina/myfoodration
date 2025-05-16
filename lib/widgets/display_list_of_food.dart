@@ -29,10 +29,10 @@ class DisplayListOfFood extends StatelessWidget {
                 final foodie = food[index];
                 return InkWell(
                     onLongPress: () {
-                      //TODO-Delete FOOD 
+                      //TODO show delete food button
                     },
                     onTap: () async {
-                      //TODO show food consequences
+                      //TODO add food
                       await showBottomSheet(context: context, builder: (ctx){
                         return FoodConsequences(food: foodie);
                       });

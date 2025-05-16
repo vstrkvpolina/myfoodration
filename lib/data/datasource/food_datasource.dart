@@ -34,7 +34,7 @@ class FoodDatasource {
         ${DBKeys.dbTable}(
         ${DBKeys.idColumn}INTEGER PRIMARY KEY AUTOINCREMENT,
         ${DBKeys.nameColumn}TEXT,
-        ${DBKeys.dateColumn}TEXT,
+        ${DBKeys.dateColumn}TEXT
       )
     ''');
   }

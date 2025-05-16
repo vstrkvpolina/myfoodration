@@ -3,17 +3,22 @@ import 'package:gap/gap.dart';
 import 'package:myfoodration/data/data.dart';
 import 'package:myfoodration/utils/utils.dart';
 import 'package:myfoodration/widgets/add_food_button.dart';
-import 'package:myfoodration/widgets/display_list_of_food.dart';
+// import 'package:myfoodration/widgets/display_list_of_food.dart';
 import 'package:myfoodration/widgets/pics/myfoodration_widget.dart';
 import 'package:myfoodration/widgets/time_on_ration_screen.dart';
+import 'package:myfoodration/providers/providers.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // добавить время переделать с app bar 
+// исправить логику с добавлением типа еда это категория и еда это привычка 
+// исправить логику display_list_of_food на добавить и удалить
 
 class RationScreen extends StatelessWidget {
   const RationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final foodState = ref.watch(foodProvider);
     // final colors = context.colorScheme;
     final deviceSize = context.deviceSize;
     // final textTheme = context.textTheme;
@@ -65,10 +70,9 @@ class RationScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: DisplayListOfFood(food: [
-                      Food(name: 'Сгущёнка', date: DateTime(2025, 05, 09)),
-                      Food(name: 'Кефир', date: DateTime(2025, 05, 09)),
-                    ]),
+                    child: DisplayListOfFood(
+                      food: foodState.food,
+                    ),
                   ),
                 ],
               ),

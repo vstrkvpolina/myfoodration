@@ -5,10 +5,23 @@ import 'package:myfoodration/utils/utils.dart';
 import 'package:myfoodration/widgets/pics/myfoodration_widget.dart';
 import 'package:myfoodration/widgets/pics/today.dart';
 
+
+// добавить riverppod и переделать
+
 class AddingScreen extends StatelessWidget {
   static AddingScreen builder(BuildContext contex, GoRouterState state) =>
       const AddingScreen();
   const AddingScreen({super.key});
+
+  // @override
+  // State<AddingScreen> createState() => _AddingScreenState();
+
+  // final TextEditingController _nameController = TextEditingController();
+
+  // @override
+  // void dispose() {
+  //   _nameController.dispose(); хуй знает, нужны ли здесь конроллеры
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -65,4 +78,14 @@ class AddingScreen extends StatelessWidget {
       ),
     );
   }
+
+// void _createFood()async{
+//   final name = _nameController.text.trim();
+//   final date = ref.watch(dateProvider);
+//   final time = ref.watch(timeProvider);
+//   if(name.isEmpty) { // 
+//     print('в вашем рационе нет добавленной еды');
+//   }
+// }
+
 }

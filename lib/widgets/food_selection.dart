@@ -14,7 +14,8 @@ class FoodSelection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final selectedFood = ref.watch(foodProvider);
+    // final selectedFood = ref.watch(foodProvider);
+    final foodState = ref.watch(foodProvider);
 // final foodselection = FoodList.values.toList(); cюда список еды 
 
     return SizedBox(
