@@ -15,7 +15,7 @@ class FoodRepositoryImpl implements FoodRepository {
   }
 
   @override
-  Future<void> deleteood(Food food) async {
+  Future<void> deleteFood(Food food) async {
     try {
       await _datasource.deleteFood(food);
     } catch (e) {
@@ -33,7 +33,7 @@ class FoodRepositoryImpl implements FoodRepository {
   }
 
   @override
-  Future<void> uptadeFood(Food food) async {
+  Future<void> uptateFood(Food food) async {
     try {
       await _datasource.updateFood(food);
     } catch (e) {
