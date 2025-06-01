@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:myfoodration/data/data.dart';
 import 'package:myfoodration/utils/utils.dart';
 import 'package:myfoodration/widgets/add_food_button.dart';
+import 'package:myfoodration/widgets/display_list_of_food.dart';
 // import 'package:myfoodration/widgets/display_list_of_food.dart';
 import 'package:myfoodration/widgets/pics/myfoodration_widget.dart';
 import 'package:myfoodration/widgets/time_on_ration_screen.dart';
@@ -18,7 +19,7 @@ class RationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final foodState = ref.watch(foodProvider);
+    // final foodState = ref.watch(foodProvider);
     // final colors = context.colorScheme;
     final deviceSize = context.deviceSize;
     // final textTheme = context.textTheme;
@@ -71,7 +72,8 @@ class RationScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: DisplayListOfFood(
-                      food: foodState.food,
+                      // food: foodState.food,
+                      food: [],
                     ),
                   ),
                 ],

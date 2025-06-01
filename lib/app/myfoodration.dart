@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myfoodration/config/config.dart';
 import 'package:myfoodration/config/routes/routes.dart';
-import 'package:myfoodration/screens/screens.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MyfoodRation extends ConsumerWidget {
